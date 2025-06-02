@@ -53,6 +53,8 @@ It is particularly well-suited to NISQ (Noisy Intermediate-Scale Quantum) device
 ##### Problem Formulation
 QAOA targets problems expressible in the form:
 
+maximize $C(z)$ where $z \in$ { $-1, 1$ } $^n$ 
+
 
 where $C(z)$ is a cost function associated with a binary string $z$. This includes problems like Max-Cut, Max-SAT, and general quadratic unconstrained binary optimization (QUBO).
 To proceed, the cost function must be encoded as a problem Hamiltonian—a sum of Pauli $Z$ terms whose ground state encodes the optimal solution.
