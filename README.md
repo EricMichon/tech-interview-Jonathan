@@ -38,7 +38,7 @@ This problem is NP-hard, and classical algorithms often rely on approximation te
 ### Reformulation for Quantum Optimization
 To run this problem on a quantum computer, we first reformulate it as a binary optimization problem. Let $n$ be the number of vertices in the graph, and define a binary variable $z_i ∈ {−1,1}$ (or equivalently, $\{0,1\}$) to each vertex $i ∈ V_i$. An edge $(i, j)$ contributes to the cut if $z_{i} \neq z_j$ which corresponds to:
 
-$$w(z)= \sum\limits_{(i.j) \in E} \frac{(1-z_i)(1-z_j)}{4}$$
+$$w(z)= \sum\limits_{(i.j) \in E} \frac{(1-z_i z_j)}{2}$$
 
 
 Thus, the goal is to maximize the above objective over all $z \in$ { $-1, 1$ } $^n$
